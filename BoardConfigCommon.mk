@@ -50,6 +50,9 @@ ifeq ($(TARGET_HAS_UDFPS),true)
 TARGET_USES_FOD_ZPOS := true
 endif
 
+# Fastcharge
+$(call soong_config_set,fastcharge,path,/sys/class/qcom-battery/restricted_charging)
+
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
